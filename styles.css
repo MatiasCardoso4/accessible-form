@@ -156,11 +156,12 @@ form>.password-input>input[type='password']:required:invalid~.error-password-mes
 .profile-completeness ul {
   background-color: rgb(206, 206, 206);
   list-style: none;
-  height: 48%;
+  height: 55%;
   width: 15vw;
   padding: 30px;
   border-radius: 32px;
   font-size: 18px;
+  margin-top: 6px;
 }
 
 .profile-completeness ul li {
