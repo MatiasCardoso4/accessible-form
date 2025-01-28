@@ -1,25 +1,49 @@
-!<DOCTYPE html>
+<DOCTYPE html>
   <html lang="en">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="stylesheet" href="styles.css" />
       <title>Accessible Form</title>
     </head>
     <body>
       <main>
         <form>
           <label for="name">Full Name</label>
-          <input type="text" id="name"  placeholder="What should we call you?" required>
+          <input
+            type="text"
+            class="input-name"
+            id="name"
+            placeholder="What should we call you?"
+            required
+          />
+          <span class="error-name-message" hidden>Input cannot be empty</span>
           <label for="email">Email</label>
-          <input type="email" id="email" placeholder="What's your email?" required>
+          <input
+            type="email"
+            id="email"
+            placeholder="What's your email?"
+            required
+          />
+          <span class="error-email-message" hidden
+            >Please enter a valid email</span
+          >
           <label for="password">Enter Password</label>
-          <input type="password" id="password" placeholder="xxxxxxxx">
+          <div class="password-input">
+            <input type="password" class="password" placeholder="xxxxxxxx" />
+            <span class="error-password-message" hidden>Input cannot be empty</span>
+            <button type="button">👁️‍🗨️</button>
+          </div>
           <label for="confirm-password">Confirm Password</label>
-          <input type="password" name="" id="confirm-password" placeholder="xxxxxxxx" required>
-          <button type="submit">Update Profile</button>
+
+          <div class="password-input">
+            <input type="password" class="password" placeholder="xxxxxxxx" />
+            <span class="error-password-message" hidden>Input cannot be empty</span>
+            <button type="button">👁️‍🗨️</button>
+          </div>
         </form>
         <section class="profile-completeness">
-          <div class="profile-percentage"></div>
+          <div class="profile-percentage">65%</div>
           <h3>Profile Completeness</h3>
           <ul>
             <li>Create Account</li>
