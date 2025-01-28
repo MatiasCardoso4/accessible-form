@@ -56,27 +56,38 @@ form input[type='password'] {
 }
 
 form button[type='submit'] {
-  width: 31vh;
+  width: 38vh;
   padding: 18px 50px;
   border: none;
   border-radius: 12px;
   background-color: black;
   color: #fff;
-  font-size: 22px;
+  font-size: 26px;
   margin-top: 24px;
+  cursor: pointer;
 }
 
 form input:focus {
   outline: 2px solid red;
 }
 
+form>.input-name:required:invalid,
+form>#email:required:invalid,
+form>.password-input>input[type='password']:required:invalid{
+  border: 2px solid red;
+}
+form>.input-name:required:invalid::placeholder,
+form>#email:required:invalid::placeholder,
+form>.password-input>input[type='password']:required:invalid::placeholder{
+  color: red;
+}
+
 form>.input-name:required:invalid~.error-name-message,
 form>#email:required:invalid~.error-email-message,
-form>.password-input>.password:required:invalid~.error-password-message {
+form>.password-input>input[type='password']:required:invalid~.error-password-message {
   display: block;
   color: rgb(255, 86, 86);
   font-weight: bold;
-  margin-bottom: 20px;
   margin-top: 14px;
   margin-left: 6px;
 }
@@ -97,4 +108,8 @@ form .password-input button {
   background-color: transparent;
   cursor: pointer;
   height: 100%;
+}
+
+form>.password-input>input[type='password']:required:invalid~.error-password-message ~ button{
+  display: none;
 }
